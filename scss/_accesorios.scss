@@ -1,0 +1,31 @@
+// _accesorios.scss
+
+.accessory-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+
+    h2 {
+        text-align: center;
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+
+        img {
+            width: 100%;
+            max-width: 300px; // Ajusta según sea necesario
+            height: auto;
+            margin: 5px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.1); // Escala un 10% más al hacer hover
+        }
+    }
+}

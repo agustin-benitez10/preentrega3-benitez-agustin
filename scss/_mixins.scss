@@ -1,0 +1,20 @@
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin button-styles($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  

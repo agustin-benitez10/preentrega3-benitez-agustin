@@ -1,0 +1,31 @@
+// _quienes-somos.scss
+
+.grid-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;  // Centrar horizontalmente
+}
+
+.img-somos {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-somos:hover {
+    transform: scale(1.1); // Aumenta un 10% al hacer hover
+}
+
+.grid-container {
+    text-align: center;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .grid-text {
+        margin-bottom: 20px;
+    }
+}
+

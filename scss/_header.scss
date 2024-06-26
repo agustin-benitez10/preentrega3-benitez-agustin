@@ -1,0 +1,26 @@
+// Header
+header {
+    background-color: $primary-color;
+    color: $text-color;
+    text-align: center;
+    padding: 1rem;
+    h1 {
+      font-size: 2rem;
+    }
+    .logo {
+      width: 50px;
+      height: auto;
+    }
+    nav.navbar {
+      background-color: $secondary-color;
+      .navbar-nav {
+        .nav-link {
+          color: $primary-color;
+          &:hover {
+            color: darken($primary-color, 10%);
+          }
+        }
+      }
+    }
+  }
+  

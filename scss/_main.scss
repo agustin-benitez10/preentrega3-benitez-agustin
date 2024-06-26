@@ -1,0 +1,159 @@
+// Variables
+$primary-color: #343a40;
+$text-color: #ffffff;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-styles($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+// Animations
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// General Styles
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header .logo {
+  width: 50px;
+  height: auto;
+}
+
+footer a img {
+  margin: 0 5px;
+}
+
+// Sections
+section {
+  h2 {
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  img {
+    height: 250px; // Ajustar según sea necesario
+    display: block;
+    margin: 0 auto;
+    animation: slideUp 0.5s ease-out;
+  }
+  .index-img {
+    height: 290px;
+  }
+  .index-img2 {
+    height: 250px;
+  }
+  .index-img3 {
+    height: 290px;
+  }
+  ul li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+}
+
+.main-container {
+  margin: 2rem auto;
+  .row {
+    display: flex;
+    justify-content: space-between;
+    section {
+      flex: 1;
+      margin: 0 1rem;
+    }
+  }
+}
+
+.contact-form-container {
+  @include flex-center;
+  margin: 20px 0;
+  .contact-form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    .form-group {
+      margin-bottom: 15px;
+      .form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+    }
+    .btn {
+      @include button-styles($primary-color, $text-color);
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: 420px) {
+  header, footer {
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar-nav {
+    text-align: center;
+    .nav-item {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  main .row > section {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .card {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-images {
+    grid-template-columns: 1fr;
+  }
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  grid-gap: 20px;
+}

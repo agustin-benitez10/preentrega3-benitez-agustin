@@ -1,0 +1,68 @@
+// _contacto.scss
+
+section {
+    margin-bottom: 40px;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .social-media-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+
+        img {
+            width: 40px;
+            height: 40px;
+            margin: 0 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.2); // Aumenta un 20% al hacer hover
+        }
+    }
+
+    .img-fluid {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .img-fluid:hover {
+        transform: scale(1.1); // Aumenta un 10% al hacer hover
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+
+        li {
+            margin: 0 10px;
+            img {
+                width: 100px;
+                height: auto;
+                transition: transform 0.3s ease-in-out;
+            }
+        }
+
+        li:hover img {
+            transform: scale(1.1); // Aumenta un 10% al hacer hover
+        }
+    }
+
+    .contact-form {
+        max-width: 600px;
+        margin: auto;
+
+        label {
+            margin-bottom: 5px;
+        }
+    }
+}
